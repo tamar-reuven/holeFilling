@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="holeFillingTask:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/holeFillingTask_jar</output-path>
+    <root id="archive" name="holeFillingTask.jar">
+      <element id="module-output" name="holeFillingTask" />
+    </root>
+  </artifact>
+</component>

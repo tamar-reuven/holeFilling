@@ -1,0 +1,52 @@
+Need to be fixed: (Code works well without these changes)
+    1. Class Point should have only 1 field- float value. There is no need to save locations x,y.
+
+An example input:
+    Image Path = "src/main/images/puppy2.png"
+    Mask Path = "src/main/images/Mask.png"
+    z = 2
+    e = 0.01
+    connectivity type = 8/4
+
+An example input that includes converting image format:
+    Image Path = "src/main/images/rabbit.jpg"
+    Mask Path = "src/main/images/Mask.png"
+    z = 2
+    e = 0.01
+    connectivity type = 8/4
+
+Constraints:
+    1. The image and the mask must be the same size NxN
+    2. Connectivity type must be 4/8
+
+
+The Following project contains:
+ a. Main -
+    1. takes input from user
+    2. checks an image format and converts it if needed
+    3. creates an image object
+    4. calls method fillHole to fill the hole in the image
+    5. calls method saveFilledImage to save the filled image
+
+ b. Point - Object point represents a pixel
+
+ c. Image - Object image represents the image we need to work on to fill te hole
+    has the following methods: (except the constructor and the regular ones)
+    1.saveFilledImage
+    2.setRgbOfEachPixelInFilledImage
+
+ d. ImageProcess - Processing the image (builds pixels matrix, finds hole set etc..)
+    1.buildPixelsMat
+    2.rgbToGrayscale
+    3.findHoleSet
+    4.findBoundarySet
+    5.isHole
+
+ e. HoleFillingCalc - calculating each color for each hole pixel with the given formula
+    1.fillHole
+    2.calcColor
+    3.euclideanDistance
+
+ f. ImageConverter - converts the image format
+
+
